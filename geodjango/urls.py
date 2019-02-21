@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from geodjango.near import views as near_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', near_views.index, name='home')
 ]
